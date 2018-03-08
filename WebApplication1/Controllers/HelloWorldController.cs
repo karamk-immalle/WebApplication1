@@ -12,14 +12,14 @@ namespace WebApplication1.Controllers
     public class HelloWorldController : Controller
     {
         // GET: /<controller>/
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my default action...";
+            return View();
         }
 
-        public string Welcome()
+        public string Welcome(string name, int ID = 1)
         {
-            return "This is the welcome action...";
+            return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
         }
     }
 }
