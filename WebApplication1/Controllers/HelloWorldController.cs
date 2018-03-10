@@ -22,7 +22,7 @@ namespace WebApplication1.Controllers
             ViewData["Message"] = "Hello" + name;
             ViewData["NumTimes"] = numTimes;
 
-            return View();
+            return View(); 
         }
     }
 }
